@@ -63,9 +63,70 @@ return [
 
 ## Using Collections
 
+### Group tags by letter:
+
+Add this macro to your config:
+
+```php
+<?php
+return [
+    'macros' => [
+        'tagGroups' => function () {
+            return $this->groupBy(function ($tag) {
+                return substr($tag->title, 0, 1);
+            });
+        }
+    ],
+];
+```
+
 ```twig
-{% set collection = [ 'str', 'Sst', 'psst' ] | collect %}
-{{ dump(collection.toUpper())  }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.css">
+</head>
+<body>
+
+<div class="section hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Tags</h1>
+            <p class="subtitle">
+                Every tag on the site.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<h2>Tag groups</h2>
+
+<div class="section">
+    <div class="container">
+        <ul class="has-columns has-text-centered">
+            {% set collection = craft.tags.group('media') | collect %}
+            {% for letter, tags in collection.tagGroups() %}
+                <div class="letter-group">
+                    <h3 class="title is-1 letter">{{ letter }}</h3>
+
+                    <ul>
+                        {% for tag in tags %}
+                            <li class="title is-5">
+                                <a href="/tags/{{ tag.slug }}">{{ tag.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
 ```
 
 Brought to you by [Superbig](https://superbig.co)
