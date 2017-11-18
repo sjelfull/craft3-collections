@@ -2,7 +2,7 @@
 
 Use Laravel Collections in Craft
 
-![Screenshot](resources/icon.png)
+![Screenshot](resources/img/icon.png)
 
 ## Requirements
 
@@ -24,11 +24,19 @@ To install the plugin, follow these instructions.
 
 ## Collections Overview
 
--Insert text here-
+Here is some good inspiration on what you can do with Collections:
+
+- [Collections documentation](https://laravel.com/docs/5.5/collections)
+- [Laravel Collections: PHP Arrays On Steroids](https://scotch.io/tutorials/laravel-collections-php-arrays-on-steroids)
+- [Laravel Collections Examples on GitHub](https://github.com/fakiolinho/laravel-collections-examples)
+- [Laravel Collections “when” Method](https://laravel-news.com/laravel-collections-when-method)
+- [Code Bright: Eloquent Collections](https://daylerees.com/codebright-eloquent-collections/)
+- [Refactoring To Collection](https://adamwathan.me/refactoring-to-collections/)
+- [10 less-known (but awesome!) Laravel Collections methods](http://laraveldaily.com/10-less-known-but-awesome-laravel-collections-methods/)
 
 ## Configuring Collections
 
-Add your macros to the config file
+Add your macros to the config file:
 
 ```php
 <?php
@@ -57,13 +65,7 @@ return [
 
 ```twig
 {% set collection = [ 'str', 'Sst', 'psst' ] | collect %}
-{{ dump(collection.toUpper)  }}
+{{ dump(collection.toUpper())  }}
 ```
-
-## Collections Roadmap
-
-Some things to do, and ideas for potential features:
-
-* Release it
 
 Brought to you by [Superbig](https://superbig.co)

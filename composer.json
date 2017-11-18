@@ -40,7 +40,7 @@
         "name": "Collections",
         "handle": "collections",
         "schemaVersion": "2.0.0",
-        "hasCpSettings": true,
+        "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/sjelfull/craft3-collections/master/CHANGELOG.md",
         "components": {
