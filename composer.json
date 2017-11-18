@@ -1,0 +1,51 @@
+{
+    "name": "superbig/craft3-collections",
+    "description": "Use Laravel Collections in Craft",
+    "type": "craft-plugin",
+    "version": "2.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "collections"
+    ],
+    "support": {
+        "docs": "https://github.com/sjelfull/craft3-collections/blob/master/README.md",
+        "issues": "https://github.com/sjelfull/craft3-collections/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superbig",
+            "homepage": "https://superbig.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23",
+        "tightenco/collect": "~v5.5.20"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "superbig\\collections\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Collections",
+        "handle": "collections",
+        "schemaVersion": "2.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/sjelfull/craft3-collections/master/CHANGELOG.md",
+        "components": {
+            "collectionsService": "superbig\\collections\\services\\CollectionsService"
+        },
+        "class": "superbig\\collections\\Collections"
+    }
+}
