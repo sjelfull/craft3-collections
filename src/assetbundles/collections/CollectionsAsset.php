@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2017 Superbig
  */
 
-namespace superbig\collections\assetbundles\Collections;
+namespace superbig\collections\assetbundles\collections;
 
 use Craft;
 use craft\web\AssetBundle;
