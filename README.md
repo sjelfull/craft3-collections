@@ -1,3 +1,5 @@
+>**Note: This plugin has been abandoned as Craft 4 includes Collections support.**
+
 # Collections plugin for Craft CMS 3.x
 
 Use Laravel Collections in Craft
